@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Salomão Jr | Portfólio</title>
+</head>
+
+<body>
+    <div class="particulas"></div>
+
+    <nav class="navegacao">
+        <ul class="menu">
+            <li>
+                <a href="#início" class="menu-link">Início</a>
+            </li>
+            <li>
+                <a href="#sobre" class="menu-link">Sobre</a>
+            </li>
+            <li>
+                <a href="#projetos" class="menu-link">Projetos</a>
+            </li>
+            <li>
+                <a href="#Cv" class="menu-link">Curriculum Vitai</a>
+            </li>
+            <li>
+                <a href="#Galeria" class="menu-link">Galeria</a>
+            </li>
+            <li>
+                <a href="#contatos" class="menu-link">Contato</a>
+            </li>
+        </ul>
+    </nav>    
+    
+    <main id="início" class="cabecalho">
+            <img src="images/me.png" alt="Foto de Salomão Jr" class="foto-perfil">
+            <h1>Salomão Júnior</h1>
+            <div class="Efeito">
+            <p>Programador e Designer Gráfico </p>
+            </div>
+    </main>
+    
+    <div class="social">    
+        <a href="https://www.facebook.com/profile.php?id=61578636391389">
+            <img src="images/5830451029999291430-removebg-preview.png" alt="" width="70" height="65">
+        </a> 
+        <a href="https://www.instagram.com/salutofficial1?igsh=MWttZmJjOGhweDNrbg==">
+            <img src="images/5830451029999291429-removebg-preview (1).png" alt="" width="60" height="60">
+            </a>
+    </div>
+     
+    
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre Mim</h2>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">
+                Olá! Chamo-me Salomão Paulo Safrão Júnior, de 18 Anos de Idade
+                Natural de Maputo/Moçambique, atualmenete frequêntando o Curso
+                de Suporte Informático no Instituto de Transportes e Comunicações. Sou um Programador e Designer Gráfico. Gosto de criar Artes criativas e Portfólio atrativos, sempre buscando desenvolver conteúdos originais e funcionais.
+            </p>
+        </div>
+    </section>
+
+
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus Projetos</h2>
+        <div class="projetos-caixa">
+            <div class="projetos-card">
+                <img src="images/ssjr.png" width="500" height="300" alt="Projeto 1" class="projeto-imagem">
+              <div class="caixa-textos-projetos">
+                <h3 class="info-projetos">Logo da Empresa SSjr</h3>
+                <p class="paragrafo-pojetos">Criação do Logótipo da minha Empresa de Multiserviços</p>
+              </div>  
+        </div>
+
+      
+        <div class="projetos-card">
+            <img src="images/menú.png" width="500" height="300" alt="Projeto 1" class="projeto-imagem">
+            <div class="caixa-textos-projetos">
+            <h3 class="info-projetos">Menú de um dos serviços da SSjr</h3>
+            <p class="paragrafo-pojetos">Conforme eu disse a SSJr é uma Empresa de Multiserviços, nisso oferecemos serviços de lanchonete, um sabor único e imcoparavél</p>
+            </div>
+    </div>
+
+    <div class="projetos-card">
+        <img src="images/algo a +.jpg" width="500" height="300" alt="Projeto 1" class="projeto-imagem">
+        <div class="caixa-textos-projetos">
+        <h3 class="info-projetos">Trabalhos Extras</h3>
+        <p class="paragrafo-pojetos">Ofereço trabalho de desiner desde a artes básicas á complexas</p>
+        </div>  
+</div>
+        </div>
+    </section>
+
+        <section id="Galeria" class="Galeria">
+            <h2 class="galeria-titulo">Galeria</h2>
+
+        <div class="Galeria img">
+        <img src="photo/photo_5823225469078277064_y.jpg" alt="">
+        <img src="photo/photo_5823225469078277059_y.jpg" alt="">
+        <img src="photo/photo_5823225469078277060_y.jpg" alt="">
+        <img src="photo/photo_5823225469078277067_y.jpg" alt="">
+        <img src="photo/photo_5823225469078277062_y.jpg" alt="">
+        </div>
+        </section>
+
+        <section id="Cv" class="Cv">
+            <h2 class="CV-titulo">Curriculum Vitai</h2>
+            <a href="Cv Profissional.html" class="Cv-form">VISUALIZAR O MEU CV</a>
+            
+        </section>
+
+    <section id="contatos" class="contatos">
+        <h2 class="contatos-titulo">Entre em Contato</h2>
+
+        <form class="formulario-contato" id="formularia" onsubmit="enviarWhats(event)">
+            <div class="grupo-form">
+                <input placeholder="Nome" class="campo-form" id="nome">
+            </div>
+
+            <div class="grupo-form">
+                <textarea class="campo-form" placeholder="Digite sua Mensagem" rows="5" id="mensagem"></textarea>
+            </div>
+
+            <button type="submit" class="botao-form">Enviar WhatsApp</button>
+
+        </form>
+
+    </section>
+
+    <script>
+
+        function enviarWhats(event){
+        event.preventDefault()    
+
+
+        const nome = document.getElementById('nome').value;
+        const mensagem = document.getElementById('mensagem').value;
+        const telefone = '+258863222028'
+
+        const texto = `Olá Me chamo ${nome} ${mensagem}`
+        const msgFormatada = encodeURIComponent(texto)
+
+        const url = `https://wa.me/${+258863222028}?text=${msgFormatada}`
+
+        console.log(url)
+
+        window.open url,'_blank'
+    </script>
+    
+        <footer>
+        <p>Desevolvido por SSJr © 2025</p>
+        </footer>
+
+       
+
+
+</body>
+</html>
